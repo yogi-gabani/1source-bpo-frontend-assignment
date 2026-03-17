@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  /* default to light theme */
+  color-scheme: light;
+}
+
+[data-theme='light'] {
+  /* Base light theme tokens */
+  --app-bg: #f5f5fb;
+  --app-surface: #ffffff;
+  --app-surface-subtle: #f3f4ff;
+  --app-border-subtle: #e2e4f0;
+  --app-border-strong: #c4c8e8;
+  --app-text: #111827;
+  --app-text-muted: #6b7280;
+  --app-accent: #4f46e5;
+  --app-accent-soft: #eef2ff;
+  --app-accent-strong: #312e81;
+  --app-danger: #f97373;
+  --app-success: #22c55e;
+  --app-warning: #eab308;
+}
+
+[data-theme='dark'] {
+  /* Dark theme tokens */
+  color-scheme: dark;
+  --app-bg: #020617;
+  --app-surface: #020617;
+  --app-surface-subtle: #0b1120;
+  --app-border-subtle: #1f2937;
+  --app-border-strong: #4b5563;
+  --app-text: #e5e7eb;
+  --app-text-muted: #9ca3af;
+  --app-accent: #6366f1;
+  --app-accent-soft: #111827;
+  --app-accent-strong: #e5e7ff;
+  --app-danger: #fca5a5;
+  --app-success: #4ade80;
+  --app-warning: #facc15;
+}
+
+body {
+  @apply antialiased;
+  background: radial-gradient(circle at top left, #f9fafb 0, #eef2ff 40%, #e5e7eb 100%);
+  color: var(--app-text);
+}
